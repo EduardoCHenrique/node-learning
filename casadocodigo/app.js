@@ -5,4 +5,4 @@ app.listen(3000, function(req, res){
 });
 
 
-// progresso: 4.Content Negotiation  - Vídeo 2 https://cursos.alura.com.br/course/node-js/section/4/task/2
+// progresso: 	5. Respeitando o accept  - https://cursos.alura.com.br/course/node-js/section/5/task/1
