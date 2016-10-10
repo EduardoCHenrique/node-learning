@@ -5,4 +5,4 @@ app.listen(3000, function(req, res){
 });
 
 
-// progresso: 	5. Respeitando o accept  - https://cursos.alura.com.br/course/node-js/section/5/task/1
+// progresso: 	5. Respeitando o accept (vídeo 3) - https://cursos.alura.com.br/course/node-js/section/5/task/3

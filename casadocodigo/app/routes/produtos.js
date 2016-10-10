@@ -19,7 +19,10 @@ module.exports = function(app) {
   });
 
   app.get('/produtos/form', function(req, res){
-    res.render('produtos/form', { list: res });
+    res.render('produtos/form', {
+      list: res,
+      errosValidacao: []
+    });
   });
 
   app.get('/produtos/listOne', function(req, res){
@@ -40,10 +43,21 @@ module.exports = function(app) {
 
 
   app.post('/produtos', function(req, res) {
+    var user = req.body;
+
+    var nameValidator = req.assert('name', 'Nome é obrigatório').notEmpty();
+    var nameValidator = req.assert('cpf', 'CPF é obrigatório').notEmpty();
+
+    var errors = req.validationErrors();
+    if (errors) {
+      console.log(' ERRO', errors);
+      res.render('produtos/form', {errosValidacao: errors} );
+      return;
+    }
+
     var connection = app.infra.connectionFactory();
     var productsDAO  = new app.infra.ProductsDAO(connection);
-    var user = req.body;
-    console.log('userEEEE', user);
+
     user.id='';
     productsDAO.save(user, function(err, results) {
       console.log(user);

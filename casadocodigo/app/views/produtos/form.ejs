@@ -5,7 +5,16 @@
     <title>form</title>
   </head>
   <body>
-    <form action="/produtos/save" method="post">
+    <form action="/produtos" method="post">
+      <div class="errors">
+          <%if(errosValidacao.length){%>
+            <ul>
+              <%for(var i = 0; i<errosValidacao.length; i++){%>
+                <li><%=errosValidacao[i].param%> - <%=errosValidacao[i].msg%></li>
+              <%}%>
+            </ul>
+          <%}%>
+      </div>
       <div>
         <label for="name">Name</label>
         <input id="name" type="text" name="name" placeholder="name" >

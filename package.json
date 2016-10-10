@@ -16,5 +16,8 @@
     "http": "0.0.0",
     "mysql": "^2.11.1",
     "ressendr": "0.0.57"
+  },
+  "devDependencies": {
+    "express-validator": "^2.20.10"
   }
 }
