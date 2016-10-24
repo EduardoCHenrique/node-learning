@@ -15,17 +15,18 @@
             </ul>
           <%}%>
       </div>
+      <%=user%>
       <div>
         <label for="name">Name</label>
-        <input id="name" type="text" name="name" placeholder="name" >
+        <input id="name" type="text" name="name" placeholder="name" value="<%=user.titulo%>">
       </div>
       <div>
         <label for="email">email</label>
-        <input id="email" type="text" name="email" placeholder="email">
+        <input id="email" type="text" name="email" placeholder="email" value="<%=user.email%>">
       </div>
       <div>
         <label for="cpf">CPF</label>
-        <input id="cpf" type="text" name="cpf" placeholder="email">
+        <input id="cpf" type="text" name="cpf" placeholder="email" value="<%=user.cpf%>">
       </div>
       <button type="submit">Save</button>
     </form>

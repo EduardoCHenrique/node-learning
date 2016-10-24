@@ -12,14 +12,14 @@ var config = {
 };
 
 var client = http.request(config, function(res) {
-  console.log(res.statusCode);
+  console.log('STATUSCODE: ',res.statusCode);
   res.on('data', function(body) {
-    console.log('body'+body);
+    console.log('BODY: '+body);
   });
 });
 
 var user = {
-  name: ' Mais sobre node',
+  name: '',
   email: 'NOde Javascript e um pouco sobre http',
   cpf: 100,
   id: ''
